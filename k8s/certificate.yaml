@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+  
+kind: Certificate
+metadata:
+  name: danielstepan-cz-tls
+spec:
+  secretName: danielstepan-cz
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: danielstepan.cz
+  dnsNames:
+    - danielstepan.cz
+    - www.danielstepan.cz
